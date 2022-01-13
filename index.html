@@ -103,12 +103,20 @@
 
         $(function () {
             $('form').submit(function () {
+                const email    = $('input[name="email"]').val();
+                const date    = $('input[name="date"]').val();
+                const stime    = $('input[name="stime"]').val();
+                const etime    = $('input[name="etime"]').val();
                 const name    = $('input[name="name"]').val();
-                const bangou = $('input[name="bangou"]').val();
-                const shushoujou  = $('input[name="shushoujou"]').val();
-                const keika  = $('input[name="keika"]').val();
-                const hatunetu = $('input[name="hatunetu"]').val();
-                const msg = `${name}\n${bangou}\n${shushoujou}\n${keika}\n${hatunetu}`;
+                const lab    = $('input[name="lab"]').val();
+                const gakunen = $('input[name="gakunen"]').val();
+                const sagyou = $('input[name="sagyou"]').val();
+                const equip = $('input[name="equip"]').val();
+                const loadcell = $('input[name="loadcell"]').val();
+                const edx  = $('input[name="edx"]').val();
+                const exp  = $('input[name="exp"]').val();
+                const support  = $('input[name="support"]').val();
+                const msg = `${email}\n${date}\n${stime}\n${etime}\n${name}\n${lab}\n${gakunen}\n${sagyou}\n${equip}\n${loadcell}\n${edx}\n${exp}\n${support}`;
                 sendText(msg);
                 return false;
             });
